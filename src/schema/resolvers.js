@@ -18,7 +18,11 @@ const resolver={
             return await User.create(input);
         },
         async deleteUser(root,{id}){
-            return await  User.destroy({where:{id:id}})
+            return await  User.destroy({where:{id:id}}).then((res)=>{
+                if (res[0]===1){
+                    return res[0];
+                }
+            })
         },
         async updateUser(root,{id,input}){
             return await  User.update({...input,id},{where:{id}}).then((res)=>{

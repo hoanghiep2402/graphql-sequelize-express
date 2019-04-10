@@ -21,10 +21,6 @@ const User = db.define('users', {
         type: Sequelize.ENUM('Male','Female'),
         allowNull: false
     },
-    post:{
-        type: Sequelize.JSON,
-        allowNull:true
-    },
 },{
     freezeTableName: true,
     timestamps:false

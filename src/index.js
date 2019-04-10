@@ -7,7 +7,7 @@ const graphqlExpress=require('express-graphql');
 const {schema}= require('./schema/Schema');
 const {User}=require('./models/User');
 const cors=require('cors');
--
+
 app.use(cors());
 app.use(bodyParser.json());
 

@@ -11,8 +11,7 @@ const typeDefs = `
         id: Int!,
         name: String!,
         gender: Gender!,
-        age: Int!,
-        post:[Post],
+        age: Int!
       },
   
       enum Gender {
@@ -20,21 +19,7 @@ const typeDefs = `
          Female   
       },
   
-      type Post {
-      id: Int!,
-      body: String!,
-      authorId: Int!,
-      totalComment: Int!,
-      comment: [Comment]
-    },
 
-    type Comment {
-      id: Int!,
-      body: String!,
-      postId: Int,
-      authorId: Int,
-      archive: Boolean
-    } 
     
     input UserInput{
         name: String!,
@@ -42,7 +27,7 @@ const typeDefs = `
         age: Int!,
     }
     type Count{
-        count:String!
+        count:Int!
     }
     
     type Mutation {
